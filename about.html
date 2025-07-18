@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ჩემს შესახებ - Tsotniko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+      padding: 3rem 5%;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 3rem;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li, nav ul a {
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.3s;
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul li:hover, nav ul a:hover {
+      color: #aaa;
+    }
+
+    .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: transparent;
+      padding: 2rem 3rem;
+    }
+
+    h2 {
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #a384f3;
+      border-bottom: 2px solid #7100d8;
+      padding-bottom: 0.5rem;
+    }
+
+    p, ul {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      color: #ccc;
+    }
+
+    ul {
+      list-style: disc inside;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills-list li {
+      background: transparent;
+      margin-bottom: 0.7rem;
+      padding: 0.5rem 1rem;
+      color: #a384f3;
+      font-weight: 600;
+    }
+
+    /* --- SPLIT SECTION --- */
+    .split-section {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5rem;
+      flex-wrap: wrap;
+    }
+
+    .split-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .split-text h2 {
+      font-size: 2.3rem;
+      color: #a384f3;
+      margin-bottom: 0.5rem;
+    }
+
+    .split-text h3 {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+
+    .split-text p {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .split-photo {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .split-photo img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(113, 0, 216, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .split-section {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>TSOTNIKO</h1>
+    <ul>
+      <a href="index.html">მთავარი</a>
+      <a href="განათლება.html">განათლება</a>
+      <li style="color: #a384f3; font-weight: 700;">ჩემს შესახებ</li>
+      <a href="hob.html">ჰობი</a>
+      <a href="company.html">კომპანიებისთივს</a>
+      <a href="photo.html">პორტფოლიო</a>
+      <li><a href="contact.html" style="color: inherit; text-decoration: none;">კონტაქტი</a></li>
+      
+  </nav>
+
+  <main class="content-wrapper">
+    <h2>ჩემს შესახებ</h2>
+
+    <p><strong>დაბადების თარიღი:</strong> 28.02.2004</p>
+    <p>
+      ახლა ვარ 21 წლის .ვსწავლობ კავკასიის უნივერსიტეტში ჟურნალისტიკის ფაკულტეტზე. მე-3 კურსის სტუდენტი 
+      ვარ კომუნიკაბელური და მარტივად შემიძლია გავერკვე ნებისმიერ სიტუაციაში. შემიძლია როგორც გუნდურად მუშაობა, ისე ინდივიდუალურად. ნებისმიერ საქმეს ვუდგები სერიოზულად, შემოქმედებითად და განსხვავებულად.</p>
+
+    <h3>ენები:</h3>
+    <ul>
+      <li>ქართული — მშობლიური</li>
+      <li>ინგლისური — B2</li>
+    </ul>
+
+    <h3>უნარები:</h3>
+    <ul class="skills-list">
+      <li>Adobe Premiere Pro</li>
+      <li>Photoshop</li>
+      <li>საიტების აწყობა</li>
+      <li>ფოტო/ვიდეო გადაღება</li>
+      <li>ადამიანების დახმარება</li>
+    </ul>
+  </main>
+
+  <section class="split-section">
+    <div class="split-text">
+      <h2>გინდა მიცნობდე?</h2>
+      <h3>წაიკითხე ეს 👇</h3>
+      <p>
+        ზოგჯერ კამერა მხოლოდ კამერა არაა. ჩემს შემთხვევაში, ის ფანჯარაა იმ სამყაროში, სადაც თითოეულ დეტალს აქვს მნიშვნელობა.  
+        ვარ ადამიანი, რომელიც არ კოპირებს შაბლონებს — მე ვქმნი ახალს.  
+        გადაღება ჩემთვის ემოციის გადმოცემის, სცენარის მოსმენის და იდეის შთაგონების პროცესია.  
+        <br><br>
+        💬 “ვაკეთებ ისე, როგორც თუ ჩემს თავს ვუკეთებდი — გულით, ზუსტად და ხარისხიანად.”
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_5808.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         უკეთ რომ გამიცნო ბევრ რამეს დავწერ ,მაგრამ ძალიან მინდა განახოთ თუ ვინ არის ჩემთვის მისაბაძი ადამიანი.
+        ადამიანი,რომელიც არის განსხიერება სიყვარულის ბატონი - ჯუმბერ ლეჟავა 
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_8025.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         მიყვარს მოგზაურობა.ხადნდახან ვამბობ,რომ მარტოც წავიდოდი სადმე და სწყინთ ხოლმე.
+         მათ გონიათ,რომ მე მათთან ერთად არ მინდა,არადა რეალობა სულ სხვანაირადაა.
+         მარტო ადამიანი შენთანვთან ბევრ რამეს აანალიზებ,ალაგებ,ახალი იდეებს და მიზნებს ისახავ. 
+         ამ ფოტოში შატაილში ვარ. ახლა ამ ზაფხულს ტობას ტბებზე მივდივართ მეგობრები და იმ ფოტოებსაც ჩავამატებ აქ.
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_2240.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+  </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         მოგზაურობა ყველაზე მაგარი რამეა ,რომ ადამიანობა შეიგრძნო
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_0697.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+   </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         ჩემთვის ადამიანს სიყვარული არ შეუძლიუ,თუ ამ ორ კრიტერიუმს არ აკმაყოფილებს:
+         1 უყვარდეს საკუთარი თავი
+         2 უყვარდეს ცხოველები 
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/21A9B4C3-59FB-43DF-B591-9AD81E3DA26F.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+ </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         ნებისმიერი ცხოველი 
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_7144.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+</section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         მიუხედავად იმისა ,რომ მარტოობა ასე თუ ისე მიყვარს,ასევე ძალიან მიყვარს ჩემი მეგობრები.
+         აი ადამიანი მეგობრების გარემოცვაში უფრო ლაღი და ბავშვურია. 
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_0200.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+  </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         ძალიან მიყვარს ჭადრაკის თამაში.ძალიან ბევრი სამაგიდო თამაში მითამაშია,მაგრამ ჭადრაკი არის საუკეთესო
+         ხშირად არავინ მეთამაშება და ინტერნეტში ვთამაშობ ხოლმე,მაგრამ რეალურად თამაშს
+         სულ სხვა შეგრძნება და აზარტი აქვს.აზარტი იმის რომ ბრძოლა მოიგო
+         მოხოცებთან თამაში უფრო მიყვარს.ალბათ რო დავბერდები ჩემს შვილიშვილებს ჭადრაკს შევაყარებ
+         და სულ ვეთამაშები რა დროსაც არ უნდა მოუნდეთ თამაში 
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_0930.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+   </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+         ჭადრაკის თამაში ისე მიყვარს ,რომ მეტროშიც კი შემიძლია ვითამაშო. მშრალ ხიდზე 10 ლარად
+         ვიყიდე მინიატურული ჭადრაკი და სულ ჩანთაში მიგდია და დავატარებ
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/E2550346-14F2-457E-BE7A-BD3B263F1B73.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+   </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+        ხო კიდე ადამიანი არ არის ადამიანი,თუ იუმორის გრძნობა არ გააჩნია.
+        შავი იუმორი თუ აქვს ხო საერთოდ ის ადამიანი სხვა ლეველზეა
+        ოღონდ შავი იუმორი მთლად დაცინვაშიც არ უნდა გადაიზარდოს
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/FA41C535-6CFB-4318-AB15-6E5E7632E90C.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+   </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+        ძალიან მიყვარს ასევე წიგნების ყიდვა და ძალიან ბევრი ფული მაქვს დაჯარხული წიგნებში
+        ალბათ,წიგნები რო გავყიდო dji osmo pocket ს ვიყიდი ,,კამერას;; ან 
+        თუნდაც კომპიუტერის ძალიან კარგ ნაწილებს მაგრამ ვერ ვიმეტებ
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_7339.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+   </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+       ერთი ცუდი თვისება მაქვს,ადამაინებს ვამსგავსებ ერთმანეთს ან ადამიანს
+       ვინმე ცნობილ ადამიანს. 
+       ამ ფოტოს გადაღების მიზანი ის იყო,რომ ოშოს მსგავსი ადამიანი შემხვდა მეტროში 
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_9899.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+   </section>
+    <section class="split-section">
+    <div class="split-text">
+      
+      <p>
+        და ხო არსებობს სამი ტიპის ადამიანი 
+  1 რობოტი
+  2 ადამანი ვინც მხოლოდ სხეულის განვითარებაზე ზრუნავს 
+  3 ადამიანი ვინც მხოლოდ გონების განვითარებაზე ზრუნავს 
+   მე მინდა ვიყო მე-4 კატეგორია და გონების და სხეულის განვითარების ბალანსი დავიცვა 
+        <br><br>
+        
+      </p>
+    </div>
+    <div class="split-photo">
+      <img src="New folder/IMG_9901.jpeg" alt="ჩემი პროფესიული ფოტო">
+      <!-- ჩასვი შენი პროფესიული ატმოსფეროს ფოტო -->
+    </div>
+  </section>
+  
+</body>
+</html>
