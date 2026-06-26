@@ -1,0 +1,283 @@
+კი, რა თქმა უნდა! თუ უკვე გაქვს საიტი (მაგალითად, GitHub Pages-ზე ან სხვაგან), უბრალოდ უნდა შექმნა ახალი ფაილი, დაარქვა მას, მაგალითად, landfill.html (ან index.html ახალ საქაღალდეში) და შიგნით ჩასვა ეს კოდი.
+კოდი ავაწყვე სპეციალურად **„ნაგვის ფერებში“** — გამოყენებულია ინდუსტრიული მუქი ნაცრისფერი (ასფალტისა და ტოქსიკური კვამლის ფერი), დამჭკნარი მწვანე და ჟანგისფერი ნარინჯისფერი აქცენტებისთვის, რაც ზუსტად გადმოსცემს ნაგავსაყრელის მძიმე ატმოსფეროს.
+აი სრული, მზა HTML კოდი შიგნიდანვე ჩაშენებული CSS სტილებით. უბრალოდ დააკოპირე და ჩასვი შენს ახალ გვერდზე:
+```html
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>თბილისის უხილავი კრიზისი - ლილო & გლდანი</title>
+    <style>
+        /* ნაგვისა და ინდუსტრიული ფერების პალიტრა */
+        :root {
+            --bg-color: #1e1f21;        /* მუქი ასფალტისფერი */
+            --card-bg: #292a2d;         /* ტოქსიკური ნაცრისფერი */
+            --text-main: #e2e4e9;       /* ღია ნაცრისფერი ტექსტისთვის */
+            --text-muted: #a0a5b0;      /* დამჭკნარი ტექსტი */
+            --accent-rust: #cf6d38;     /* ჟანგისფერი ნარინჯისფერი */
+            --accent-toxic: #7c8a4f;    /* დამჭკნარი/ტოქსიკური მწვანე */
+            --border-color: #3f4146;    /*ნაგავსაყრელის ღობის ფერი */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* ჰედერი */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            border-bottom: 3px solid var(--accent-rust);
+            background: linear-gradient(180deg, #141517 0%, var(--bg-color) 100%);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header h1.en {
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .subtitle {
+            color: var(--accent-rust);
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* სექციები */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        /* მედია კონტეინერები (ვიდეო/ფოტო პლეისჰოლდერები) */
+        .media-placeholder {
+            background-color: var(--card-bg);
+            border: 2px dashed var(--accent-toxic);
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent-toxic);
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .media-placeholder span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+
+        /* ტექსტური ბლოკები */
+        p {
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        p.en {
+            color: var(--text-muted);
+        }
+
+        /* ციტატის ბლოკი */
+        .quote-box {
+            background-color: var(--card-bg);
+            border-left: 5px solid var(--accent-rust);
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .quote-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .quote-box p {
+            text-align: center;
+            font-style: italic;
+            color: var(--accent-rust);
+        }
+
+        /* ფოტოგალერეის ბლოკი */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            background-color: var(--card-bg);
+            height: 200px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ფუტერი */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: #141517;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 2px solid var(--border-color);
+        }
+
+        .lecturer-note {
+            background-color: rgba(207, 109, 56, 0.1);
+            border: 1px solid var(--accent-rust);
+            padding: 15px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--accent-rust);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>თბილისის უხილავი კრიზისი</h1>
+            <h1 class="en">Tbilisi's Invisible Crisis</h1>
+            <p class="subtitle">ლილოსა და გლდანის ნაგავსაყრელების კვალდაკვალ / Tracking Lilo and Gldani Landfills</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section>
+            <div class="media-placeholder">
+                აქ ჩაჯდება პირველი ვიდეო (დრონის კადრები)
+                <span>First video will be here (Drone footage of Lilo & Gldani)</span>
+            </div>
+            <div class="lecturer-note">
+                <strong>* შენიშვნა ლექტორისთვის:</strong> შესავალი მულტიმედიური მასალა, რომელიც ასახავს ნაგავსაყრელების მასშტაბებს და მათ სიახლოვეს საცხოვრებელ ზონებთან.
+            </div>
+        </section>
+
+        <section class="grid-2">
+            <div>
+                <p>ყოველდღიურად თბილისი ათასობით ტონა ნარჩენს წარმოქმნის. ლილოს მოქმედი პოლიგონი და გლდანის ნაგავსაყრელის ტერიტორია არის ის ორი წერტილი, სადაც დედაქალაქის „მეორე ცხოვრება“ იწყება. თუმცა, ამ რეალობას რიგითი მოქალაქეები იშვიათად ხედავენ.</p>
+                <p>ეკოლოგიური კრიზისი მხოლოდ სუნს არ ეხება; ეს არის გრუნტის წყლების დაბინძურების, მეთანის გაზის გაფრქვევისა და გაუმართავი მართვის სისტემის შედეგი, რომელიც წლებია მძიმე ტვირთად აწევს გარეუბნებს.</p>
+            </div>
+            <div>
+                <p class="en">Every day, Tbilisi generates thousands of tons of waste. The active landfill in Lilo and the area of Gldani landfill are the two spots where the capital's "second life" begins. However, ordinary citizens rarely witness this reality.</p>
+                <p class="en">The ecological crisis is not just about the odor; it is a consequence of groundwater contamination, methane gas emissions, and an outdated management system that has heavily burdened the suburbs for years.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="grid-2">
+                <div>
+                    <h3 style="color: var(--accent-rust); margin-bottom: 15px;">ციფრები და რეალობა</h3>
+                    <p>ოფიციალური მონაცემებით, ლილოს ნაგავსაყრელი თბილისის ნარჩენების ძირითად მასას იღებს. სპეციალისტების შეფასებით, თუ ნარჩენების სეპარაცია და გადამუშავება რეალურ ფაზაში არ გადავა, არსებული რესურსი კატასტროფულად სწრაფად ამოიწურება.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent-toxic); margin-bottom: 15px;">Numbers & Reality</h3>
+                    <p class="en">According to official data, the Lilo landfill receives the bulk of Tbilisi's waste. Experts estimate that if waste separation and recycling do not enter a realistic phase, the existing capacity will be depleted catastrophically fast.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="media-placeholder">
+                აქ იქნება მეორე ვიდეო (ინტერვიუები ადგილობრივებთან)
+                <span>Second video will be here (Interviews with locals)</span>
+            </div>
+            <div class="lecturer-note">
+                <strong>* შენიშვნა ლექტორისთვის:</strong> ინტერვიუები გლდანისა და ლილოს მიმდებარედ მცხოვრებ მოსახლეობასთან. ფოკუსი მათ ყოველდღიურ პრობლემებსა და ჯანმრთელობის რისკებზე.
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 20px;">დაბინძურებული ზონები / Contaminated Zones</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">ფოტო 1: ლილოს პოლიგონი</div>
+                <div class="gallery-item">ფოტო 2: გლდანის ხედი</div>
+                <div class="gallery-item">ფოტო 3: ნარჩენების ნაკადი</div>
+                <div class="gallery-item">ფოტო 4: ეკოლოგიური მონიტორინგი</div>
+            </div>
+        </section>
+
+        <section class="quote-box">
+            <h2>„ეკოლოგიური პრობლემების იგნორირება გარეუბნებში, მთელი ქალაქის კრიზისია“</h2>
+            <p>— ნაწყვეტი ეკოლოგების დასკვნიდან / Excerpt from Environmental Report</p>
+        </section>
+
+        <section>
+            <div class="media-placeholder">
+                აქ იქნება მესამე - ფინალური ვიდეო (გამოსავალი)
+                <span>Third - Final video will be here (Solutions)</span>
+            </div>
+            <div class="lecturer-note">
+                <strong>* პროექტის კულმინაცია:</strong> ვიდეო სრულდება კითხვით: „აქვს თუ არა თბილისს სუფთა მომავლის შანსი?“ და ექსპერტების კონკრეტული რეკომენდაციებით ნარჩენების ბიზნესის რეფორმირებაზე.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center; color: var(--text-muted);">თბილისი • ნარჩენები • ეკოლოგია | Tbilisi • Waste • Ecology</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+```
+### როგორ ჩასვა ეს საიტზე:
+ 1. თუ იყენებ **GitHub**-ს, შენს რეპოზიტორიაში შექმენი ახალი ფაილი სახელით landfill.html.
+ 2. ჩააკოპირე ეს მთლიანი კოდი შიგნით და შეინახე (Commit).
+ 3. საიტი ხელმისაწვდომი იქნება მისამართზე: შენი-საიტი.github.io/landfill.html. (თუ მთავარ გვერდად გინდა, უბრალოდ index.html დაარქვი ცალკე ახალ პაპკაში).
